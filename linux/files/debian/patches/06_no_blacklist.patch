@@ -1,0 +1,69 @@
+Disables blacklisting of unusable sip versions. Usable versions is handled
+in the control file. 
+--- a/Pymakr/Globals/__init__.py
++++ b/Pymakr/Globals/__init__.py
+@@ -60,62 +60,9 @@
+     Module functions to check for blacklisted versions of the prerequisites.
+     
+     @return flag indicating good versions were found (boolean)
++
++    Not used in Debian, always return True
+     """
+-    from install import BlackLists, PlatformsBlackLists
+-    
+-    # determine the platform dependent black list
+-    if isWindowsPlatform():
+-        PlatformBlackLists = PlatformsBlackLists["windows"]
+-    elif isLinuxPlatform():
+-        PlatformBlackLists = PlatformsBlackLists["linux"]
+-    else:
+-        PlatformBlackLists = PlatformsBlackLists["mac"]
+-    
+-    # check version of sip
+-    try:
+-        import sipconfig
+-        sipVersion = sipconfig.Configuration().sip_version_str
+-        # always assume, that snapshots are good
+-        if "snapshot" not in sipVersion:
+-            # check for blacklisted versions
+-            for vers in BlackLists["sip"] + PlatformBlackLists["sip"]:
+-                if vers == sipVersion:
+-                    print(
+-                        'Sorry, sip version {0} is not compatible with eric6.'
+-                        .format(vers))
+-                    print('Please install another version.')
+-                    return False
+-    except ImportError:
+-        pass
+-    
+-    # check version of PyQt
+-    from PyQt5.QtCore import PYQT_VERSION_STR
+-    pyqtVersion = PYQT_VERSION_STR
+-    # always assume, that snapshots are good
+-    if "snapshot" not in pyqtVersion:
+-        # check for blacklisted versions
+-        pyqtVariant = "PyQt{0}".format(pyqtVersion[0])
+-        for vers in BlackLists[pyqtVariant] + PlatformBlackLists[pyqtVariant]:
+-            if vers == pyqtVersion:
+-                print('Sorry, PyQt version {0} is not compatible with eric6.'
+-                      .format(vers))
+-                print('Please install another version.')
+-                return False
+-    
+-    # check version of QScintilla
+-    from PyQt5.Qsci import QSCINTILLA_VERSION_STR
+-    scintillaVersion = QSCINTILLA_VERSION_STR
+-    # always assume, that snapshots are new enough
+-    if "snapshot" not in scintillaVersion:
+-        # check for blacklisted versions
+-        for vers in BlackLists["QScintilla2"] + \
+-                PlatformBlackLists["QScintilla2"]:
+-            if vers == scintillaVersion:
+-                print(
+-                    'Sorry, QScintilla2 version {0} is not compatible'
+-                    ' with eric6.'.format(vers))
+-                print('Please install another version.')
+-                return False
+     
+     return True
+ 

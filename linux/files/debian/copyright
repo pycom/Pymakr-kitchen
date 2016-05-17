@@ -1,0 +1,93 @@
+This package was debianized by Rogerio Reis <rvr@debian.org> on
+Mon,  7 Jun 2004 19:10:29 +0100.
+
+It was downloaded from http://www.die-offenbachs.de/eric/eric5-download.html
+
+Upstream Author: Detlev Offenbach <detlev@die-offenbachs.de>
+
+Copyright:
+
+   Copyright (c) 2002 - 2009 Detlev Offenbach <detlev@die-offenbachs.de>
+
+   eric5 (and the others) is released under the conditions of the GPL
+   (version 3). See separate license file for more details. Third party
+   software included in eric5 is released under their respective license
+   and contained in the eric5 distribution (as LICENSE.GPL) for convenience.
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL-3'.
+
+
+Two third party libraries exist in the code called pygments and chardet.
+They are not used but the debian versions python-pygments and
+python-chardet are used instead.
+
+Pygments has the following license. The AUTHORS file can be found below.
+
+Copyright (c) 2006 by the respective authors (see AUTHORS file).
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+
+    * The names of the contributors may not be used to endorse or
+      promote products derived from this software without specific
+      prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+(AUTHORS file)
+Pygments is written and maintained by Georg Brandl <g.brandl@gmx.net>.
+
+Other contributors (as mentionend in :copyright:s) are:
+
+- Armin Ronacher <armin.ronacher@active-4.com>
+- Lukas Meuser <pocoo@quittenbrod.de>
+- Matt Good <trac@matt-good.net>
+- Tim Hatch <tim@timhatch.com>
+- Ronny Pfannschmidt
+- Dennis Kaarsemaker
+- Marek Kubica
+- Ben Bangert
+- Tiberius Teng
+- Adam Blinkinsop <blinks@acm.org>
+- Kirk McDonald
+- Christopher Creutzig <christopher@creutzig.de>
+- Frits van Bommel
+- Matteo Sasso
+- Kumar Appaiah <akumar@ee.iitm.ac.in>
+- Varun Hiremath <varunhiremath@gmail.com>
+- Jeremy Thurgood
+- Matthew Harrison
+- Steven Hazel
+
+Many thanks for all your contributions!
+
+Also thanks to the following contributors that helped fixing minor
+bugs:
+
+- Pierre Bourdon
+
+Chardet has the following license
+GNU LESSER GENERAL PUBLIC LICENSE
+Version 2.1, February 1999
+See: /usr/share/common-licenses/LGPL-2.1

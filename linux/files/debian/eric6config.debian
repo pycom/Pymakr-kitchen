@@ -1,0 +1,17 @@
+cfg = {
+    'ericDir'              : "/usr/share/pymakr/modules",
+    'ericPixDir'           : "/usr/share/pymakr/pixmaps",
+    'ericIconDir'          : "/usr/share/pymakr/icons",
+    'ericDTDDir'           : "/usr/share/pymakr/DTDs",
+    'ericCSSDir'           : "/usr/share/pymakr/CSSs",
+    'ericStylesDir'        : "/usr/share/pymakr/Styles",
+    'ericDocDir'           : "/usr/share/doc/pymakr",
+    'ericExamplesDir'      : "/usr/share/doc/pymakr/Examples",
+    'ericTranslationsDir'  : "/usr/share/qt4/translations",
+    'ericTemplatesDir'     : "/usr/share/pymakr/DesignerTemplates",
+    'ericCodeTemplatesDir' : "/usr/share/pymakr/CodeTemplates",
+    'ericOthersDir'        : "/usr/share/pymakr",
+    'bindir'               : "/usr/bin",
+    'mdir'                 : "/usr/share/pymakr/modules",
+    'apidir'               : "/usr/share/pymakr/api"
+}

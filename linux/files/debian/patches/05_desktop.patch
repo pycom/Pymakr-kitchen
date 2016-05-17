@@ -1,0 +1,23 @@
+Fixing desktop exec codes.
+--- a/Pymakr/pymakr.desktop
++++ b/Pymakr/pymakr.desktop
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Version=1.0
+ Type=Application
+-Exec=eric6@MARKER@
++Exec=eric6 %F@MARKER@
+ MimeType=text/x-python;
+ Icon=eric@MARKER@
+ Terminal=false
+--- a/Pymakr/pymakr_webbrowser.desktop
++++ b/Pymakr/pymakr_webbrowser.desktop
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Version=1.0
+ Type=Application
+-Exec=pymakr_webbrowser@MARKER@
++Exec=pymakr_webbrowser %u@MARKER@
+ MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
+ Icon=ericWeb@MARKER@
+ Terminal=false

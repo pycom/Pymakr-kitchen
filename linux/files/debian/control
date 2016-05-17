@@ -1,0 +1,27 @@
+Source: pymakr
+Section: devel
+Priority: optional
+Maintainer: Pycom Ltd <support@pycom.io>
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: python-all (>= 2.5),
+                     python-qt4 (>= 4.5),
+                     python-qscintilla2 (>=2.4.3),
+                     python-sip-dev,
+                     qt4-dev-tools,
+                     libqt4-dev,
+                     python-qt4-dev
+X-Python-Version: >=2.7
+Standards-Version: 3.9.6
+Homepage: http://www.pycom.io/solutions/pymakr/
+
+Package: pymakr
+Architecture: all
+Depends: ${python:Depends},
+         ${misc:Depends},
+         python-qt4 (<<4.7.5) | python-qt4 (>=4.7.6),
+         python-pygments,
+         python-chardet,
+         python-serial,
+         python-qscintilla2 (>=2.4.3),
+         python (>= 2.6) | python-simplejson
+Description: An editor to work with Pycom products

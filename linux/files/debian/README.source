@@ -1,0 +1,4 @@
+The translations must be downloaeded from sourceforge.net. The
+script get_translations.sh can be used to download and install them.
+$ ./debian/get_translations.sh
+

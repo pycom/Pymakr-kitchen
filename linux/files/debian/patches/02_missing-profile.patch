@@ -1,0 +1,28 @@
+New patch generated from eric 4.0.4-1 diff.gz
+Original from Torsten Marek. Check for python-profiler since it is 
+in non-free
+--- a/Pymakr/Debugger/DebugUI.py
++++ b/Pymakr/Debugger/DebugUI.py
+@@ -1356,6 +1356,22 @@
+         @param runProject flag indicating coverage of the current project (True)
+                 or script (false)
+         """
++        try:
++            import profile
++        except ImportError:
++            QMessageBox.critical(
++                self.ui,
++                self.trUtf8("Profiling not possible"),
++                self.trUtf8(
++"<p>The module for profiling Python code has been split from the Debian Python"
++" package and put into the non-free section due to licensing issues.</p>"
++"<p>Please install the package <b>python-profiler</b> to enable profiling support.</p>"
++"<p>Your Debian package maintainer</p>"),
++                self.trUtf8("&OK"))
++            return
++        else:
++            del profile
++        
+         self.__resetUI()
+         doNotStart = False
+         

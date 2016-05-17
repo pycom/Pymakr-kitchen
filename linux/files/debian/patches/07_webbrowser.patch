@@ -1,0 +1,11 @@
+Move desktop file into the same category as the IDE
+--- a/Pymakr/eric6_webbrowser.desktop
++++ b/Pymakr/eric6_webbrowser.desktop
+@@ -11,5 +11,6 @@
+ Comment[de]=Web Browser für PyQt5
+ GenericName=Web Browser
+ GenericName[de]=Web Browser
+-Categories=Qt;Python;Network;WebBrowser;
++Categories=Development;IDE;
++Keywords=programming;code;python;ruby
+ StartupNotify=true

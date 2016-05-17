@@ -1,0 +1,98 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+
+ERICDIR=debian/pymakr/usr/share/pymakr/modules
+QTAPIFILE=debian/apis/pyqt.api
+KDEAPIFILE=debian/apis/pykde.api
+PYTHONAPIFILE=debian/apis/python.api
+APIFILES=
+#$(QTAPIFILE)
+# $(KDEAPIFILE)
+# $(PYTHONAPIFILE)
+LAN=en
+
+clean:
+	dh_testdir
+	dh_testroot
+	find . -name "*.pyc" -exec rm {} \;
+	find . -name "Ui_*" -exec rm {} \;
+	find . -name __pycache__ -prune | xargs rm -rf
+	rm -rf debian/pymakr debian/apis debian/qtapis debian/kdeapis debian/pyapis
+	rm -f eric6*
+	rm -f *-stamp
+	dh_clean 
+
+
+apifile-stamp:
+	#   generate API files
+	#mkdir -p debian/qtapis debian/kdeapis debian/pyapis debian/apis
+	#python3 debian/gen_qt_apis.py debian/qtapis/
+	#python debian/gen_kde_apis.py debian/kdeapis/
+	#python debian/gen_python_api.py debian/pyapis/
+	#sort -u debian/qtapis/*.api > $(QTAPIFILE)
+	#sort -u debian/kdeapis/*.api > $(KDEAPIFILE)
+	#sort -u debian/pyapis/*.api > $(PYAPIFILE)
+	touch apifile-stamp
+
+build: build-arch build-indep
+build-arch:
+build-indep:
+
+install: apifile-stamp
+	dh_testdir -i
+	dh_testroot -i
+	dh_prep -i 
+	python install.py -i debian/pymakr -x -c -f debian/eric6config.debian --noapis
+	dh_installdirs -i
+
+	#for i in transl-*/pymakr/i18n/*.ts; do\
+	#	lrelease-qt4 $$i -qm debian/pymakr/usr/share/qt4/translations/`basename $$i .ts`.qm;\
+	#done
+
+	rm -f debian/pymakr/usr/share/doc/pymakr/LICENSE.GPL3
+	rm -f $(ERICDIR)/LICENSE.GPL3
+#	rm -f $(ERICDIR)/install*.py
+
+#   copy API files
+#	mv debian/pymakr/usr/share/pymakr/api/* debian/pymakr-api-files/usr/share/pymakr/api
+
+	#for i in $(APIFILES); do \
+	#	install -o root -g root -m 644 $$i \
+	#		debian/pymakr-api-files/usr/share/pymakr/api/python; \
+	#done
+
+#	remove README-PyXML.txt
+	rm -f debian/pymakr/usr/share/doc/pymakr/README-PyXML.txt
+#	remove the ThirdParty libraries
+	rm -rf debian/pymakr/usr/share/pymakr/modules/ThirdParty
+	find debian/pymakr/ -name '*.py[co]' -delete
+#	rm -f debian/pymakr/usr/share/applications/pymakr.desktop
+	find . -name __pycache__ -prune | xargs rm -rf
+
+binary: binary-indep binary-arch
+binary-arch:
+
+# Build architecture-independent files here.
+binary-indep: install
+	dh_testdir -i
+	dh_testroot -i
+	dh_installchangelogs
+#	dh_installdocs -i --exclude=LICENSE.GPL3 --exclude=README
+	dh_installmenu -i
+#	dh_installman -i
+	dh_install -i -X__pycache__
+	dh_link -i
+	dh_lintian -i
+	dh_compress -i
+	dh_python2 -X.*/DebugClients/Python/.* -X.*/UtilitiesPython2/.*
+	dh_fixperms -i
+	dh_installdeb -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
+
+.PHONY: clean binary-indep binary-arch binary install

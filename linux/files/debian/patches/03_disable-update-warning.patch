@@ -1,0 +1,50 @@
+Disables update outside Debian package system. 
+--- a/Pymakr/UI/UserInterface.py
++++ b/Pymakr/UI/UserInterface.py
+@@ -6000,8 +6000,9 @@
+                         self.tr("Update available"),
+                         self.tr(
+                             """The update to <b>{0}</b> of eric6 is"""
+-                            """ available at <b>{1}</b>. Would you like to"""
+-                            """ get it?""")
++                            """ available at <b>{1}</b>."""
++                            """Please ask the Debian maintainer"""
++                            """ to upgrade the package.""")
+                         .format(versions[2], versions[3]),
+                         yesDefault=True)
+                     url = res and versions[3] or ''
+@@ -6011,8 +6012,9 @@
+                         self.tr("Update available"),
+                         self.tr(
+                             """The update to <b>{0}</b> of eric6 is"""
+-                            """ available at <b>{1}</b>. Would you like to"""
+-                            """ get it?""")
++                            """ available at <b>{1}</b>."""
++                            """Please ask the Debian maintainer"""
++                            """ to upgrade the package.""")
+                         .format(versions[0], versions[1]),
+                         yesDefault=True)
+                     url = res and versions[1] or ''
+@@ -6032,8 +6034,9 @@
+                         self.tr("Update available"),
+                         self.tr(
+                             """The update to <b>{0}</b> of eric6 is"""
+-                            """ available at <b>{1}</b>. Would you like"""
+-                            """ to get it?""")
++                            """ available at <b>{1}</b>."""
++                            """Please ask the Debian maintainer"""
++                            """ to upgrade the package.""")
+                         .format(versions[0], versions[1]),
+                         yesDefault=True)
+                     url = res and versions[1] or ''
+@@ -6121,8 +6124,8 @@
+                 self.tr("Error during updates check"),
+                 self.tr("""Could not perform updates check."""))
+         
+-        if url:
+-            QDesktopServices.openUrl(QUrl(url))
++        #if url:
++            #QDesktopServices.openUrl(QUrl(url))
+         
+     @pyqtSlot()
+     def __versionsDownloadCanceled(self):

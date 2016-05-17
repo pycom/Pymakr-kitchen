@@ -1,0 +1,659 @@
+pymakr (1.0.0.b1-1) unstable; urgency=low
+  Based on eric6 6.1.3
+
+  * New upstream release
+
+ -- Pycom Ltd <support@pycom.io>  Fri, 8 Apr 2016 10:47:00 +0200
+
+eric (6.0.8-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add binary dependency on python3-pyqt5.qtwebkit, (Closes: #792512)
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 02 Aug 2015 19:59:38 +0100
+
+eric (6.0.7-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update all manpages to eric6
+  * Remove 05_minor_docfix.patch, fixed in upstream
+  * Update other patches
+  * Bump standards version to 3.9.6, no changes needed
+  * Change dependencies to python3, pyqt5 (Closes: 784513)
+  * Fix exec field in desktop file
+  * Removing qtapi files. Provided by the qscintilla package
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Thu, 09 Jul 2015 10:04:03 +0200
+
+eric (5.4.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update patch 06_no_blacklist, fixes eric5_webbrowser
+  * Add patch 07_webbrowser to fix desktop file. Change the
+    Category to Development;IDE; even if it is a webbrowser
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Wed, 02 Jul 2014 18:31:35 +0000
+
+eric (5.4.3-1) unstable; urgency=medium
+
+  * New upstream relase (Closes: #685140)
+  * Add dependencies on all needed Python3 related packages
+  * Remove all javascript files with missing sources.
+    Will discuss with upstream (Closes: #735897)
+  * Remove Martin Höfling from being an uploader
+  * Add keywords and more languages to eric.desktop
+  * Update all patches to work with eric5
+  * Add manpages eric5_qregularexpression and eric5_snap
+  * Disable 02_missing-profile.patch
+  * Disable language zh_CN.GB2312, it doesn't work
+  * Update watch file
+  * Add qt5-doc and pyqt5-doc to Suggest
+  * Add path to qt5-doc and pyqt5-doc to 01_fix_path patch
+  * Add dependency on dh-python
+  * Rename eric4config.debian to eric5config.debian
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Tue, 08 Apr 2014 22:08:05 +0200
+
+eric (4.5.18-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump standards version to 3.9.5
+  * Add path to PyKDE4 doc to patch 01_path_fix
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Wed, 08 Jan 2014 23:25:22 +0100
+
+eric (4.5.13-1) unstable; urgency=low
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Gudjon I. Gudjonsson ]
+  * New upstream release
+  * Add keywords to desktop file
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Tue, 13 Aug 2013 07:56:06 +0200
+
+eric (4.5.8-1) experimental; urgency=low
+
+  * New upstream release
+  * Bump standards version to 3.9.4
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sat, 19 Jan 2013 19:59:53 +0000
+
+eric (4.5.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Mon, 07 May 2012 21:57:45 +0200
+
+eric (4.5.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump standards version to 3.9.3
+  * Add manpage eric4_iconeditor.1
+  * Rename all man pages from eric4-* to eric4_* and
+    edit them to reflect the changes
+  * Add an override file to suppress the warning about the
+    empty directory /usr/share/eric/api
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 22 Apr 2012 08:21:16 +0200
+
+eric (4.5.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Tue, 07 Feb 2012 19:10:33 +0100
+
+eric (4.4.18-1) unstable; urgency=low
+
+  * New upstream release
+  * Switch to dh_python2
+  * Remove quilt dependency
+  * Change XS-Python-Version to X-Python-Version
+  * Change dh_clean -k to dh_prep
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Mon, 07 Nov 2011 08:25:51 +0100
+
+eric (4.4.17-1) unstable; urgency=low
+
+  * New upstream release
+  * Add build-indep target
+  * Change doc/python2.5-doc path to doc/python-doc
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 11 Sep 2011 10:53:43 +0200
+
+eric (4.4.15-1) unstable; urgency=low
+
+  * New upstream file
+  * Fixed watch file, not to search for snapshots
+  * Removed version from python-sip/qt4 dependencies. It disturbs
+    the build daemon and the non-working versions have never 
+    been packaged (Closes: #629749)
+  * Bump standards version to 3.9.2
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Tue, 14 Jun 2011 08:02:53 +0200
+
+eric (4.4.12-1) unstable; urgency=low
+
+  * New upstream release
+  * Add description to 06_no_blacklist
+  * Change - to \- in eric4-api.1
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Mon, 07 Feb 2011 22:07:26 +0100
+
+eric (4.4.9-1) unstable; urgency=low
+
+  * New upstream release
+  * Add patch 06_no_blacklist.patch
+  * Add versioned build dependency on python-sip-dev <<4.11 or >=4.11.2
+    and python-qt4-dev <<4.7.5 or >=4.7.6 and binary dependency on
+    python-qt4 <<4.7.5 or >=4.7.6 since these versions are blacklisted 
+    in upstream
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 28 Nov 2010 10:31:01 +0100
+
+eric (4.4.7-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump standards version to 3.9.1
+  * Added patch 05_minor_docfix, minor fixes to documentation
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Thu, 19 Aug 2010 08:36:58 +0200
+
+eric (4.4.6-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump standards version to 3.9.0
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Fri, 09 Jul 2010 19:15:32 +0200
+
+eric (4.4.4a-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sat, 15 May 2010 14:33:56 +0200
+
+eric (4.4.3-2) unstable; urgency=low
+
+  * Bump binary package python-qscintilla2 dependency to version 2.4.3
+    (Closes: #579013)
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sat, 24 Apr 2010 20:59:03 +0200
+
+eric (4.4.3-1) unstable; urgency=low
+
+  [ Gudjon I. Gudjonsson ]
+  * New upstream release
+  * Change qscintilla dependency to >=2.4.3, old version needed recompiling
+
+  [ Piotr Ożarowski ]
+  * Don't ship .pyc files
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Tue, 20 Apr 2010 21:54:05 +0200
+
+eric (4.4.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Fix patch 03_disable-update-warning
+  * Add Italian translation
+  * Bump python-all and XS-Python-Version to >=2.5
+  * Change translations to multiple source format
+  * Make a get-orig-source target
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 28 Mar 2010 23:41:51 +0200
+
+eric (4.4.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Patches 03_installer_fix, 04_documentation_paths removed, seem to be
+    unecessary.
+  * Add manpage eric4-sqlbrowser and eric4-webbrowser
+  * Fix gen_*_api.py scripts
+  * Minor changes to other manpages
+  * Create separate gen_qt/kde_api.py scripts
+  * Add dependency on python (>= 2.6) | python-simplejson
+  * Bump standards version to 3.8.4, no changes needed
+  * Change debhelper dependency to 7
+  * Fix clean target
+  * Improve get_translations script, thanks to Piotr
+  * Add VCS fields
+  * Exclude Python3 directory from dh_support
+  * Remove dependency on python-qt-dev
+  * Change sip4 dependency to python-sip-dev
+  * Remove python-sip4 binary dependency
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 07 Feb 2010 15:55:42 +0100
+
+eric (4.3.10-1) unstable; urgency=low
+
+  * New upstream release (Closes: #563183)
+  * Change dependency on python-all-dev to python-all
+  * Add misc dependency to eric-api-files
+  * Change patch 01_path_fix to fix qt3 tools
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sat, 09 Jan 2010 14:23:26 +0100
+
+eric (4.3.9-1) unstable; urgency=low
+
+  * New upstream release
+  * Change sip4 dependency to >=4.9
+  * Add runtime dependency on pyton-sip4 (>=4.9)
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Mon, 09 Nov 2009 19:22:37 +0100
+
+eric (4.3.8-1) unstable; urgency=low
+
+  * New upstream release
+  * Change script get_translations.sh from bash to sh (works with dash)
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 11 Oct 2009 23:23:04 +0200
+
+eric (4.3.7.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump Standards-version to 3.8.3, no changes needed
+  * Fix qt3-doc dir in 01_path_fix.dpatch
+  * Remove qt4-assistant from suggest
+  * Fixed patch 06_disable-update-warning (Closes: #504284)
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 06 Sep 2009 13:18:42 +0200
+
+eric (4.3.5-1) unstable; urgency=low
+
+  * New upstream release
+  * Change python-doc dir to python2.5-doc.
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Fri, 24 Jul 2009 08:22:20 +0200
+
+eric (4.3.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Comment out gen_python_api.py in rules file. Api file generation needs
+    to be checked.
+  * Upgrade dependencies. Python-qt/sip versions cannot be mixed but eric
+    can be backported with older python versions.
+  * Depend on experimental version on python-qscintilla2 (Closes: #532772)
+  * Add versioned dependency on runtime python-qscintilla2 (2.4-3)
+  * Add python-qt4-sql to suggests
+  * Bump standard version to 3.8.2. No changes needed
+  * Remove dh_desktop from rules file
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 21 Jun 2009 21:38:27 +0200
+
+eric (4.3.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #519929)
+  * Bump standards version to 3.8.1, no changes needed
+  * Remove patch 05_fix-api-path, not needed anymore
+  * Add eric.api to eric-api-files
+  * Update eric4-api.1 manpage
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Thu, 19 Mar 2009 07:34:06 +0100
+
+eric (4.3.0-2) unstable; urgency=low
+
+  * Add a patch 07_debian_chardet to make eric use python-chardet
+    instead of the upstream one
+  * Remove the whole ThirdParty directory from the package
+  * Change from py_central to py_support
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Fri, 06 Mar 2009 08:32:47 +0100
+
+eric (4.3.0-1) unstable; urgency=low
+
+  [ Marco Rodrigues ]
+  * debian/control:
+    + Set new Homepage URL.
+    + Add XB-Python-Version to eric-api-files.
+    + Change qt4-doc to qt4-doc-html because
+      Documentation uses the html one.
+    + Add python-qt4-doc to Suggests to make
+      PyQt4 documentation available.
+    * Add python-kde4-doc to Suggest to make
+      PyKDE4 documentation available.
+    + Add ${misc:Depends} to fix lintian warning.
+  * debian/eric.desktop:
+    + Remove 'Application' from Categories.
+    + Remove Icon filename extension.
+  * debian/docs:
+    + Remove duplicate entry of README-i18n.txt
+  * Rename xpm icon from eric-icon.xpm to eric.xpm.
+  * debian/rules:
+    + Remove manual install of desktop and xpm icon.
+  * debian/eric.install:
+    + Add install for desktop and xpm icon.
+  * debian/debian-manpages/eric4-doc.1:
+    + Remove first line to fix lintian warning.
+  * debian/copyright:
+    + Fix copyright years according to upstream.
+  * debian/eric.dirs:
+    + Remove desktop and icon respective paths.
+
+  [ Gudjon I. Gudjonsson ]
+  * New upstream release (Closes: #501770)
+  * Upstream license change from GPL2 to GPL3
+  * Fix patches 01, 04 and 05
+  * Add dependency on python-pygments and python-chardet
+  * Add pygments license to copyright file
+  * Remove ThirdParty after installation to debian/eric in debian/rules
+  * Make new ThirdParty __init__.py files to import pygments and chardet
+    files
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Thu, 26 Feb 2009 21:52:36 +0100
+
+eric (4.2.5-1) experimental; urgency=low
+
+  * New upstream release
+  * Disable 06_disable-update-warning patch since it is disfunctional
+  * Remove suggest and recommends for qt4-linguist, libqt3-i18
+  * Add suggestion for qt4-dev-tools 
+  * Added GPL version to copyright file 
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 01 Feb 2009 10:58:55 +0000
+
+eric (4.2.4a-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Fri, 26 Dec 2008 23:07:03 +0100
+
+eric (4.2.2a-1) experimental; urgency=low
+
+  * New upstream release
+  * Fix path to documentation 
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Wed, 15 Oct 2008 06:55:51 +0100
+
+eric (4.2.0-1) experimental; urgency=low
+
+  * New upstream release
+  * Section changed from "python" to "devel"
+  * Not installing ChangeLog since it is equal to changelog.
+  * Remove "Encoding=UTF-8" from desktop file
+  * Move eric from section python to devel
+  * Remove README-PyXML.txt, obsolete in Debian
+  * Remove dh_strip, dh_shlibdeps
+  * No reference to eric3 in desktop file found (Closes: #472751)
+  * Python-qscintilla2 is updated and doesn't cause crash at startup.
+    (Closes: #488041)
+  * Add remaining man pages
+  * Add description to patches
+  * Remove link changelog->Changelog, fixed in upstream
+  * Fix patch 05_fix-api-path
+  * Change debian/rules, api files installed directly to eric-api-files
+  * Api dir changed to /usr/share/eric/api, according to upstream
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Mon, 25 Aug 2008 08:53:52 +0200
+
+eric (4.1.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Disable "Update available" warning. 
+    Patch 06_disable-update-warning.dpatch. (Closes: #485313)
+  * Bump standard version to 3.8.0. No changes needed.
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Mon, 09 Jun 2008 16:33:39 +0200
+
+eric (4.1.4-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #466094)
+  * Doesn't recommend python-xml. (Closes: #468584)
+  * Commented out 03_installer_fix.dpatch since fixed upstream.
+  * Fixed the watch file.
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Thu, 22 May 2008 21:47:03 +0200
+
+eric (4.1.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Changed installer file patch 03_installer_fix.dpatch.
+    Will send to Detlev
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 02 Mar 2008 11:42:27 +0000
+
+eric (4.1.0-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #466094)
+  * Added MMartin Höfling <martin.hoefling@gmx.de> as a co-maintain.
+  * Added a patch 03_install_fix from Per Hansen. Sent to upstream.
+  * Bicycle repairman has been removed from sources. Removed the
+    related patches and lines from debian/rules file.
+  * Moved all changes for Userinterface.py to __init__.py.
+  * Added more api files to eric-api-files.
+  * Conflict bug is considered outdated since eric3 is obsolete.
+    (Closes: #378583)
+  * The shell now works with the french language but the default keyboard
+    shortcuts may have to be imported (default.e4k). (Closes: #453087)
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Fri, 22 Feb 2008 22:51:42 +0000
+
+eric (4.0.4-2) unstable; urgency=low
+
+  * Removed dependency of  python-qt3 and python-qtext and suggestions
+    of all other qt3 based libraries.
+  * Upstream version 4.0.4 closes the following bugs
+    (Closes: #432929, #345738, #453198)
+  * Bug #453087 still persists, sent to upstream
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Wed, 23 Jan 2008 11:16:37 +0100
+
+eric (4.0.4-1) unstable; urgency=low
+
+  * New upstream release
+  * New maintainer
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Wed, 19 Dec 2007 15:20:19 +0100
+
+eric (3.9.5-1) unstable; urgency=low
+
+  * New upstream release
+  * Do not build-depend on python-kde3 any more for now
+  * FTBFS: sort: open failed: debian/apis/k*.api: No such file or
+    directory (Closes: #423762)
+
+ -- Torsten Marek <shlomme@debian.org>  Tue, 15 May 2007 23:13:30 +0200
+
+eric (3.9.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Move eric3config.py to /usr/share/eric/modules (Closes: #378580)
+  * Suggest python-profiler, don't recommend it (Closes: #378726)
+  * Tighten dependency on transitioned Python modules
+  * Clean up patches
+  
+ -- Torsten Marek <shlomme@debian.org>  Tue, 18 Jul 2006 10:00:27 +0200
+
+eric (3.9.0-2) unstable; urgency=low
+
+  * Update package for new Debian Python policy
+  * Bump standards version to 3.7.2
+
+ -- Torsten Marek <shlomme@debian.org>  Tue,  4 Jul 2006 15:24:48 +0200
+
+eric (3.9.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Torsten Marek <shlomme@debian.org>  Tue,  2 May 2006 10:59:07 +0200
+
+eric (3.8.2-3) unstable; urgency=low
+
+  * Fix lintian warnings
+
+ -- Torsten Marek <shlomme@debian.org>  Sat, 22 Apr 2006 15:06:25 +0200
+
+eric (3.8.2-2) unstable; urgency=low
+
+  * Changed maintainer address to shlomme@debian.org
+  * Special thanks to Rogerio Reis for sponsoring so many uploads of eric!
+  * Added handling for missing Qt3 or Python documentation 
+    and added pythond-doc to suggestions (Closes: #360507, #360508)
+  * Dropped unneeded build-dependency on python-sip4-qt3
+  * Raise debhelper compatibility level to 5
+  * Added python-kde3-dev to build-dependencies and install PyKDE API files again
+	
+ -- Torsten Marek <shlomme@debian.org>  Sun,  9 Apr 2006 10:31:16 +0200
+
+eric (3.8.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Torsten Marek <shlomme@gmx.net>  Wed, 29 Mar 2006 14:16:26 +0200
+
+eric (3.8.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #344494)
+
+ -- Torsten Marek <shlomme@gmx.net>  Fri, 30 Dec 2005 19:11:58 +0100
+
+eric (3.8.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Translation files are not included into orig.tar.gz
+    any more, but into diff.gz.
+  * Added call to dh_desktop to debian/rules
+	
+ -- Torsten Marek <shlomme@gmx.net>  Mon,  7 Nov 2005 13:05:01 +0100
+
+eric (3.7.2-1) unstable; urgency=low
+
+  * New upstream release (Closes: #330608)
+  * Added libqt3-i18n to Recommends:
+  * Added suggestions for Ruby and mention Ruby
+    debugging support in description
+  * Add some words about eric to eric-api-files 
+    description (Closes: #318674)
+
+ -- Torsten Marek <shlomme@gmx.net>  Tue, 20 Sep 2005 12:40:13 +0200
+
+eric (3.7.1+3.7.2-rc2-1) unstable; urgency=low
+
+  * New upstream release
+  * Some cleanups in debian/rules
+
+ -- Torsten Marek <shlomme@gmx.net>  Mon,  5 Sep 2005 00:07:22 +0200
+
+eric (3.7.1+3.7.2-rc1-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated standards version to 3.6.2
+  * Add .desktop file from Ubuntu
+  * Install the icon for menu and .desktop file in /usr/share/pixmaps
+  * Disable building the PyKDE apis for this release
+  * Really move sitecustomize.py out of site-packages/
+  * Remove junk out of eric3-qregexp manpage
+	
+ -- Torsten Marek <shlomme@gmx.net>  Thu,  1 Sep 2005 21:18:49 +0200
+
+eric (3.7.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #312711).
+  * python-xml, python-profiler and python-kde3 upgraded from
+    suggestions to recommendations
+  * The Python modules are now installed in /usr/share/eric/modules
+    rather than in /usr/lib/python2.3/site-packages/eric
+  * Added watchfile again
+  * API files for Python, PyQt and PyKDE are created and put into
+    a separate package (Closes: #294071).
+  * Add APIs from eric-api-files, if installed
+  * Add Debian Qt directory in preferences
+
+ -- Torsten Marek <shlomme@gmx.net>  Sat,  9 Jul 2005 19:24:41 +0200
+
+eric (3.6.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Add python-profiler to suggestions (Closes: #295206)
+  * Display a note if python-profiler is not installed and
+    the user wants to profile
+  * Removed uninstalled eric-icon.xpm from icons/
+  * Patches now use dpatch
+  * Added a link from /usr/bin/eric to /usr/bin/eric3 on
+    popular demand
+
+ -- Torsten Marek <shlomme@gmx.net>  Sun, 20 Feb 2005 20:16:20 +0100
+
+eric (3.6.1-3) unstable; urgency=low
+
+  * Fix typo in Suggests:, there is no package qt3-docs,
+    only qt3-doc
+  * New upload because the path to the python interpreter
+    in eric3 shell wrappers was wrong (Closes: #293452).
+
+ -- Torsten Marek <shlomme@gmx.net>  Thu,  3 Feb 2005 16:40:23 +0100
+
+eric (3.6.1-2) unstable; urgency=low
+
+  * Change Build-Depends-Indep acc. to Python policy,
+    depend on python >= 2.3, remove ${python:Depends} and 
+    build dependency on python-dev    
+  * add homepage url to description
+
+ -- Torsten Marek <shlomme@gmx.net>  Sun, 30 Jan 2005 11:46:13 +0100
+
+eric (3.6.1-1) unstable; urgency=low
+
+  * New upstream release
+  * removed watch file because orig.tar.gz has
+    to be created manually at every release
+
+ -- Torsten Marek <shlomme@gmx.net>  Sun, 30 Jan 2005 01:03:24 +0100
+
+eric (3.6.0-2) unstable; urgency=low
+
+  * Keep files generated by install script out of .diff
+  * Adapt package description, lowercase first word
+
+ -- Torsten Marek <shlomme@gmx.net>  Fri, 28 Jan 2005 19:22:45 +0100
+
+eric (3.6.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: ##291341)
+  * Recreated source tarball with translations (Closes: #281236).
+  * Moved sitecustomize.py out of sys.path (Closes: #290805).
+  * Added Qt3 development tools and python-xml to package suggestions
+  * removed dependency python2.3-sip4-qt3  since it is already
+    depended upon by python2.3-qt3
+  * removed dependency sip4 since it is not necessary to run eric
+	
+ -- Torsten Marek <shlomme@gmx.net>  Sun, 23 Jan 2005 16:50:06 +0100
+
+eric (3.5.0-3) unstable; urgency=low
+
+  * sip4 and python2.3-sip4-qt3 added to the dependencies
+
+ -- Rogerio Reis <rvr@debian.org>  Mon,  6 Dec 2004 00:08:35 +0000
+
+eric (3.5.0-2) unstable; urgency=low
+
+  * Bug fix: "eric: FTBFS: Missing Build-Depends on 'python-dev'", thanks
+    to Andreas Jochens (Closes: #275879).
+
+ -- Rogerio Reis <rvr@debian.org>  Tue, 12 Oct 2004 09:16:48 +0100
+
+eric (3.5.0-1) unstable; urgency=low
+
+  * New upstream release. Almost all the work was done by Torsten Marek
+    <shlomme@gmx.net> that was already packing this new version. 
+    (Closes: #275321).
+  
+  * Bug fix: eric environments fixed, thanks to Paolo Alexis Falcone
+    (Closes: #275319).
+
+ -- Rogerio Reis <rvr@debian.org>  Thu,  7 Oct 2004 20:59:53 +0100
+
+eric (3.4.2-2) unstable; urgency=low
+
+  * Bug fix: "eric: package description feature list indentation", thanks
+    to Bastian Kleineidam (Closes: #272933).
+
+ -- Rogerio Reis <rvr@debian.org>  Sun, 26 Sep 2004 10:30:31 +0100
+
+eric (3.4.2-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #170615)
+  
+
+ -- Rogerio Reis <rvr@debian.org>  Mon,  7 Jun 2004 19:10:29 +0100
+

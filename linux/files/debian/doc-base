@@ -1,0 +1,11 @@
+Document: pymakr
+Title: Pymakr source code documentation
+Author: Detlev Offenbach
+Abstract: This manual describes the internal APIs of pymakr
+ Pymakr is a full featured Python IDE based on eric6. Eric is written in PyQt using the QScintilla
+ editor widget, debugging support, project management and much more.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/pymakr/Source/index.html
+Files: /usr/share/doc/pymakr/Source/*.html

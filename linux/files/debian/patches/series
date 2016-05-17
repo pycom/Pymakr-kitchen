@@ -1,0 +1,7 @@
+01_path_fix.patch
+#02_missing-profile.patch
+#03_disable-update-warning.patch
+04_debian_chardet.patch
+#05_desktop.patch
+06_no_blacklist.patch
+07_webbrowser.patch

@@ -1,0 +1,26 @@
+Changes eric to use the Debian supplied chardet instead of
+of the upstream ThirdParty one.
+--- a/Pymakr/Utilities/__init__.py
++++ b/Pymakr/Utilities/__init__.py
+@@ -239,8 +239,8 @@
+     if Preferences.getEditor("AdvancedEncodingDetection"):
+         # Try the universal character encoding detector
+         try:
+-            import ThirdParty.CharDet.chardet
+-            guess = ThirdParty.CharDet.chardet.detect(text)
++            import CharDet.chardet
++            guess = CharDet.chardet.detect(text)
+             if guess and guess['confidence'] > 0.95 and \
+                     guess['encoding'] is not None:
+                 codec = guess['encoding'].lower()
+@@ -422,8 +422,8 @@
+     
+     # try codec detection
+     try:
+-        import ThirdParty.CharDet.chardet
+-        guess = ThirdParty.CharDet.chardet.detect(buffer)
++        import chardet
++        guess = chardet.detect(buffer)
+         if guess and guess['encoding'] is not None:
+             codec = guess['encoding'].lower()
+             return str(buffer, encoding=codec)

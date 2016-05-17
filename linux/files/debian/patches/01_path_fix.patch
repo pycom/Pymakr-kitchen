@@ -1,0 +1,24 @@
+New patch generated from eric 4.1.0-1 diff.gz
+Fixes paths and toolname extensions.
+--- a/Pymakr/Preferences/__init__.py
++++ b/Pymakr/Preferences/__init__.py
+@@ -692,13 +692,13 @@
+     helpDefaults = {
+         "HelpViewerType": 1,      # this corresponds with the radio button id
+         "CustomViewer": "",
+-        "PythonDocDir": "",
+-        "Python2DocDir": "",
++        "PythonDocDir": "/usr/share/doc/python3-doc/html/index.html",
++        "Python2DocDir": "/usr/share/doc/python-doc/html/index.html",
+         "QtDocDir": "",
+-        "Qt4DocDir": "",
+-        "Qt5DocDir": "",
+-        "PyQt4DocDir": "",
+-        "PyQt5DocDir": "",
++        "Qt4DocDir": "/usr/share/doc/qt4-doc-html/html/index.html",
++        "Qt5DocDir": "/usr/share/doc/qt5-doc-html/html/index.html",
++        "PyQt4DocDir": "/usr/share/doc/python-qt4-doc/html/index.html",
++        "PyQt5DocDir": "/usr/share/doc/pyqt5-doc/html/index.html",
+         "PySideDocDir": "",
+         "SingleHelpWindow": True,
+         "SaveGeometry": True,
