@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-soft_version="1.0.0.b1"
+soft_version="1.0.0.b3"
 
 main () {
 	setup_app_dir
@@ -11,6 +11,7 @@ main () {
 	setup_icon
 	customize_python
 	create_dmg
+	clean_kitchen
 }
 
 
@@ -45,8 +46,7 @@ setup_app_dir () {
 
 	cp -R /opt/local/lib/lib{png,z,crypto,ssl}* Pymakr.app/Contents/Resources/lib
 
-	rm -Rf Pymakr.app/Contents/Resources/src/.git 2> /dev/null
-	rm -Rf Pymakr.app/Contents/Resources/src/i18n_disabled 2> /dev/null
+	rm -Rf Pymakr.app/Contents/Resources/src/{.git,i18n_disabled,.vscode} 2> /dev/null
 }
 
 convert_links () {
@@ -65,10 +65,8 @@ run_install () {
 }
 
 post_cleaning () {
-	rm -Rf Pymakr.app/Contents/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pymakr
-	rm -Rf Pymakr.app/Contents/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/eric6*
+	rm -Rf Pymakr.app/Contents/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/{pymakr,eric6*}
 	find Pymakr.app/Contents/Resources/src/ -name '*.pyc' | xargs rm
-
 }
 
 
@@ -92,8 +90,12 @@ customize_python () {
 }
 
 create_dmg () {
-	build_path=$( set -- $PWD/files/{dmgbuild,biplist,mac_alias,ds_store}; IFS=:; echo "$*" )
-	PYTHONPATH="${build_path}" python files/dmgbuild/scripts/dmgbuild -s files/dmgsettings.py "Pymakr" Pymakr.dmg
+	build_path=$( set -- $PWD/extra_files/{dmgbuild,biplist,mac_alias,ds_store}; IFS=:; echo "$*" )
+	PYTHONPATH="${build_path}" python extra_files/dmgbuild/scripts/dmgbuild -s extra_files/dmgsettings.py "Pymakr" ../pymakr_setup_${soft_version}.dmg
+}
+
+clean_kitchen () {
+	rm -Rf "Pymakr.app"
 }
 
 bootstrap=$(cat <<'BOOTSTRAP'
