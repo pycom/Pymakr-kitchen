@@ -1,2 +1,5 @@
 Must clone the Pymakr repo in a directory called src. Then go to the linux or the mac directory, and run the scripts.
+Remember that the Windows and Linux versions need their version to be written by hand:
 
+Windows: inside the iss script
+Linux: build_files/debian/changelog
