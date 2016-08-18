@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-soft_version="1.0.0.b3"
+# if the next variable is not set or empty, the script will load the version from src/UI/Info.py
+#soft_version="1.0.0"
 
 main () {
+	find_release_version
 	setup_app_dir
 	run_install
 	post_cleaning
@@ -14,6 +16,12 @@ main () {
 	clean_kitchen
 }
 
+find_release_version () {
+	code_version=$(grep "^Version" ../src/UI/Info.py | sed "s/.*'\([^']*\)'/\1/")
+	if [ -z "${soft_version}" ]; then
+		soft_version=${code_version}
+	fi
+}
 
 setup_app_dir () {
 	rm -Rf output Pymakr.dmg Pymakr.app 2> /dev/null
