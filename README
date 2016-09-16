@@ -5,8 +5,9 @@ Windows: inside the iss script
 Linux: build_files/debian/changelog
 
 For Windows:
-	1. Install python 2.7 as "for this user only". Remove things like documentation
+	1. Install python 2.7 as "for this user only". Remove things like documentation (keep pip, see bellow)
 	2. Install PyQt. Remove unneded things
-	3. On the source code directory, compile the Ui with: python compileUiFiles.py
-	4. Run the program at least once: python pymakr.py
-	5. Create the installer
+	3. Install pySerial
+	4. On the source code directory, compile the Ui with: python compileUiFiles.py
+	5. Run the program at least once: python pymakr.py
+	6. Create the installer
