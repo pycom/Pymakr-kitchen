@@ -1,3 +1,11 @@
+pymakr (1.0.0.b4-1) unstable; urgency=low
+  Based on eric6 6.1.8
+
+  * Bug Fixes
+  * Lite interface
+
+ -- Pycom Ltd <support@pycom.io>  Thu, 19 Sep 2016 15:30:00 +0200
+
 pymakr (1.0.0.b3-1) unstable; urgency=low
   Based on eric6 6.1.8
 

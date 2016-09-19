@@ -5,7 +5,7 @@
 #define CLEAR_INSTALL_DIR
 
 #define MyAppName "Pymakr"
-#define MyAppVersion "1.0.0.b3"
+#define MyAppVersion "1.0.0.b4"
 #define MyAppPublisher "Pycom"
 #define MyAppURL "https://www.pycom.io/solutions/pymakr/"
 
