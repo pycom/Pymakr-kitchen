@@ -93,6 +93,7 @@ setup_icon () {
 
 customize_python () {
 	plutil -replace CFBundleName -string Pymakr Pymakr.app/Contents/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/Info.plist
+	plutil -replace CFBundleExecutable -string Pymakr Pymakr.app/Contents/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/Info.plist
 	plutil -replace CFBundleIconFile -string "pymakr.icns" Pymakr.app/Contents/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/Info.plist
 	ln -s ../../../../../../../../Resources/src/pixmaps/pymakr.icns Pymakr.app/Contents/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/Resources/pymakr.icns
 }
