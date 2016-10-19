@@ -378,8 +378,9 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
         wname = wfile + marker
         wrapper = ('''#!/bin/sh\n'''
                    '''\n'''
-                   '''exec "{0}" "{1}/{2}.py"{3} "$@"\n'''
-                   .format(sys.executable, pydir, wfile, pyqt4opt))
+                   '''/usr/bin/env python2 -V && v=2\n'''
+                   '''exec "/usr/bin/env" "python$v" "{0}/{1}.py"{2} "$@"\n'''
+                   .format(pydir, wfile, pyqt4opt))
 
     copyToFile(wname, wrapper)
     os.chmod(wname, 0o755)
