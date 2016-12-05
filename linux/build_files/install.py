@@ -379,7 +379,7 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
         wrapper = ('''#!/bin/sh\n'''
                    '''\n'''
                    '''/usr/bin/env python2 -V && v=2\n'''
-                   '''exec "/usr/bin/env" "python$v" "{0}/{1}.py"{2} "$@"\n'''
+                   '''exec "/usr/bin/env" "python$v" "{0}/{1}.py"{2} --pyqt4 "$@"\n'''
                    .format(pydir, wfile, pyqt4opt))
 
     copyToFile(wname, wrapper)
